@@ -1,0 +1,4 @@
+apitest/
+__pycache__/
+*.pyc
+.env
