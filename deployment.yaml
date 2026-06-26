@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-api
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: calculator-api
+
+  template:
+    metadata:
+      labels:
+        app: calculator-api
+
+    spec:
+      containers:
+      - name: calculator-api
+        image: ubebeose/calculator-api:v2
+        ports:
+        - containerPort: 8000

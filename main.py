@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Message": "Simple Calculator API"}
+    return {"Message": "Version 2 - Running on Kubernetes!"}
 
 @app.get("/add")
 def add(num1: float, num2: float):
